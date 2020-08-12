@@ -1,0 +1,101 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+package lab2;
+public class bankaccount
+{
+	public static void main(String[] args) {
+	    Account c1=new Account("pk520","Adhi");
+	    Account c2= new Account("pk560","Dia",c1.balance);
+		System.out.println("\customer 1  Details:\n");
+		System.out.println("\nID"+(c1.getid());
+		System.out.println("\Name:"(c1.getname());
+								
+		System.out.println("\nInitial balance:Rs."+(c1.getbalance()));
+	
+		System.out.println("\customer 2 details :");
+	
+		System.out.println("\nID:"+(c2.getid());
+	
+
+		System.out.println("\nName:"+(c2.getname());
+	
+		System.out.println("\nInitial balance :Rs."+(c2.getbalance ()));
+			System.out.println("\nBalance after credit in customer 1's Account is:");
+			System.out.println("Rs."+(c1.credit(1500)));
+	
+		System.out.println("\nBalance after debit customer 1's account is:");
+
+
+		System.out.println("Rs."+(c1.debit(500)));
+	
+
+		System.out.println("\nBalance of customer"+(c1.getname()+"\nRs."+(c1.getbalance()));
+		c1.transferto(c2,450);
+			System.out.println("\nAfter transaction  customer details");
+	
+		System.out.println("\n customer 2");
+				System.out.println(c2.toString ());
+	}
+
+	
+
+	}
+class Account
+{
+    String I'd,name;
+    int balance =0;
+    Account(String i,String n)
+    {
+        id=i;
+        name=n;
+    }
+    Account(String i,String n,int b)
+    {
+        id=i;
+        name=n;
+        balance=b;
+    }
+    String getid()
+    {
+        return id;
+    }
+    String getname()
+    {
+        return name;
+    }
+    int getbalance()
+    {
+        return balance ;
+    }
+    int debit(int amout)
+    {
+        if(amount <=balance )
+          balance-=account;
+        else
+          System.out .println("Amount exceeded balance");
+          return balance ;
+    }
+    int transfer to(Account Acc1,int amount )
+    {
+        if(amount<=balance )
+        Acc1.balance=amount;
+        else
+        System .out.println("Amount exceeded balance");
+        return balance ;
+    }
+    public String toString()
+    {
+        return("\nID:"+id+"\nName:"\nBalance:Rs."+balance ):
+    }
+    
+}
+	
+
+
+	
+
